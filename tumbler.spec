@@ -4,7 +4,7 @@
 #
 Name     : tumbler
 Version  : 0.1.31
-Release  : 1
+Release  : 2
 URL      : http://archive.xfce.org/src/xfce/tumbler/0.1/tumbler-0.1.31.tar.bz2
 Source0  : http://archive.xfce.org/src/xfce/tumbler/0.1/tumbler-0.1.31.tar.bz2
 Summary  : Supporting library for tumbler
@@ -94,6 +94,9 @@ make VERBOSE=1 V=1 %{?_smp_mflags} check
 rm -rf %{buildroot}
 %make_install
 %find_lang tumbler
+## make_install_append content
+mv %{buildroot}%{_sysconfdir}/xdg %{buildroot}%{_datadir}/. && rmdir %{buildroot}%{_sysconfdir}
+## make_install_append end
 
 %files
 %defattr(-,root,root,-)
@@ -104,6 +107,7 @@ rm -rf %{buildroot}
 /usr/share/dbus-1/services/org.xfce.Tumbler.Cache1.service
 /usr/share/dbus-1/services/org.xfce.Tumbler.Manager1.service
 /usr/share/dbus-1/services/org.xfce.Tumbler.Thumbnailer1.service
+/usr/share/xdg/tumbler/tumbler.rc
 
 %files dev
 %defattr(-,root,root,-)
