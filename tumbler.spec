@@ -4,7 +4,7 @@
 #
 Name     : tumbler
 Version  : 0.1.31
-Release  : 2
+Release  : 3
 URL      : http://archive.xfce.org/src/xfce/tumbler/0.1/tumbler-0.1.31.tar.bz2
 Source0  : http://archive.xfce.org/src/xfce/tumbler/0.1/tumbler-0.1.31.tar.bz2
 Summary  : Supporting library for tumbler
@@ -14,13 +14,17 @@ Requires: tumbler-lib
 Requires: tumbler-data
 Requires: tumbler-doc
 Requires: tumbler-locales
+BuildRequires : curl-dev
 BuildRequires : docbook-xml
 BuildRequires : gtk-doc
 BuildRequires : gtk-doc-dev
 BuildRequires : intltool
+BuildRequires : libjpeg-turbo-dev
 BuildRequires : libxslt-bin
 BuildRequires : pkgconfig(dbus-1)
 BuildRequires : pkgconfig(dbus-glib-1)
+BuildRequires : pkgconfig(freetype2)
+BuildRequires : pkgconfig(gdk-pixbuf-2.0)
 BuildRequires : pkgconfig(gio-2.0)
 BuildRequires : pkgconfig(glib-2.0)
 BuildRequires : pkgconfig(gmodule-2.0)
@@ -81,7 +85,7 @@ locales components for the tumbler package.
 %setup -q -n tumbler-0.1.31
 
 %build
-%configure --disable-static
+%configure --disable-static --enable-pixbuf-thumbnailer --enable-jpeg-thumbnailer --enable-font-thumbnailer
 make V=1  %{?_smp_mflags}
 
 %check
@@ -165,6 +169,12 @@ mv %{buildroot}%{_sysconfdir}/xdg %{buildroot}%{_datadir}/. && rmdir %{buildroot
 %files lib
 %defattr(-,root,root,-)
 /usr/lib64/*.so.*
+/usr/lib64/tumbler-1/plugins/cache/tumbler-cache-plugin.so
+/usr/lib64/tumbler-1/plugins/cache/tumbler-xdg-cache.so
+/usr/lib64/tumbler-1/plugins/tumbler-cover-thumbnailer.so
+/usr/lib64/tumbler-1/plugins/tumbler-font-thumbnailer.so
+/usr/lib64/tumbler-1/plugins/tumbler-jpeg-thumbnailer.so
+/usr/lib64/tumbler-1/plugins/tumbler-pixbuf-thumbnailer.so
 
 %files locales -f tumbler.lang 
 %defattr(-,root,root,-)
