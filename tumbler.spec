@@ -4,7 +4,7 @@
 #
 Name     : tumbler
 Version  : 0.1.31
-Release  : 5
+Release  : 6
 URL      : http://archive.xfce.org/src/xfce/tumbler/0.1/tumbler-0.1.31.tar.bz2
 Source0  : http://archive.xfce.org/src/xfce/tumbler/0.1/tumbler-0.1.31.tar.bz2
 Summary  : Supporting library for tumbler
@@ -16,6 +16,7 @@ Requires: tumbler-doc
 Requires: tumbler-locales
 BuildRequires : curl-dev
 BuildRequires : docbook-xml
+BuildRequires : gstreamer-dev
 BuildRequires : gtk-doc
 BuildRequires : gtk-doc-dev
 BuildRequires : intltool
@@ -85,10 +86,12 @@ locales components for the tumbler package.
 %setup -q -n tumbler-0.1.31
 
 %build
+export LANG=C
 %configure --disable-static --enable-pixbuf-thumbnailer --enable-jpeg-thumbnailer --enable-font-thumbnailer
 make V=1  %{?_smp_mflags}
 
 %check
+export LANG=C
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost

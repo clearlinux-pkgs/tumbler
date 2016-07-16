@@ -1,0 +1,15 @@
+libc.so.6
+libcurl.so.4
+libdbus-1.so.3
+libdbus-glib-1.so.2
+libfreetype.so.6
+libgdk_pixbuf-2.0.so.0
+libgio-2.0.so.0
+libglib-2.0.so.0
+libgmodule-2.0.so.0
+libgobject-2.0.so.0
+libgthread-2.0.so.0
+libjpeg.so.62
+libm.so.6
+libpng16.so.16
+libpthread.so.0
