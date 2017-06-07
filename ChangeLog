@@ -1,3 +1,48 @@
+commit fa4e12c621040ba8660f58850588550ce237b0ff
+Author: Ali Abdallah <ali@xfce.org>
+Date:   Wed Jun 7 10:32:44 2017 +0200
+
+    On some systems $XDG_DATA_HOME can have duplicated path
+    (ex. '/usr/share' twice). This causes tumbler to load a
+    specilized thumbnailer twice causing an assertion failure
+    in tumbler_manager_load_thumbnailer.
+    
+    Use GHashTable to record already loaded path to avoid
+    the issue, fix #13618.
+
+commit 01ed220403e0445c7c7bad3660199aedf7b8ffc7
+Author: Unit 193 <unit193@ubuntu.com>
+Date:   Tue May 16 03:44:10 2017 -0400
+
+    Fix typo in tumbler.rc
+    
+    Signed-off-by: Ali Abdallah <aliovx@gmail.com>
+
+commit f6c2e7df53ee0290cc7804b153477334ac0dc5fe
+Author: Justin Gassner <justin.gassner@web.de>
+Date:   Sat Dec 17 19:57:03 2016 +0100
+
+    Fix typo in exif tag for image height
+    
+    Signed-off-by: Ali Abdallah <aliovx@gmail.com>
+
+commit b4888b571f4b7b877b79178a348cf46d150680f1
+Author: Michał Górny <mgorny@gentoo.org>
+Date:   Sun Feb 19 10:17:40 2017 +0100
+
+    Fix finding libopenraw-0.1.0 due to changed pkg-config name
+    
+    Bug: https://bugzilla.xfce.org/show_bug.cgi?id=13201
+
+commit 72bd7cba0920d239f2212194e42a2efd9dbbbf00
+Author: Ali Abdallah <ali@xfce.org>
+Date:   Wed Jun 7 09:51:34 2017 +0200
+
+    According to the API doc of GdkPixbuf, gdk_pixbuf_loader_write will close the pixbuf loader on error.
+    
+    This commit adds a check for error so that we don't re-close the
+    pixbuf loader (which causes sigabrt). Fix #13360
+
 commit 5ef58d3821f766cb8f77b1feb6ad29b0d44eb41a
 Author: Harald Judt <h.judt@gmx.at>
 Date:   Sat Feb 28 16:42:17 2015 +0100
@@ -5004,7 +5049,7 @@ Date:   Wed Nov 25 16:01:02 2009 +0100
     
     Conflicts:
     
-    	tumblerd/tumbler-specialized-thumbnailer.c
+            tumblerd/tumbler-specialized-thumbnailer.c
     
     Signed-off-by: Jannis Pohlmann <jannis@xfce.org>
 
@@ -5265,8 +5310,8 @@ Date:   Wed Oct 21 00:31:26 2009 +0200
     
     Conflicts:
     
-    	plugins/font-thumbnailer/font-thumbnailer.c
-    	plugins/pixbuf-thumbnailer/pixbuf-thumbnailer.c
+            plugins/font-thumbnailer/font-thumbnailer.c
+            plugins/pixbuf-thumbnailer/pixbuf-thumbnailer.c
 
 commit 5c7ce962e7dd4b2de1ce4df8acf68518fe9cc68e
 Author: Iñigo Varela <malditoastur@gmail.com>
@@ -5486,7 +5531,7 @@ Date:   Thu Oct 8 13:49:01 2009 +0200
     
     Conflicts:
     
-    	tumblerd/tumbler-group-scheduler.c
+            tumblerd/tumbler-group-scheduler.c
 
 commit f583df4a3bf353ad577723c5fce538b872fd9e47
 Author: Jannis Pohlmann <jannis@xfce.org>
