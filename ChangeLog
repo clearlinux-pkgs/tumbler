@@ -1,6 +1,143 @@
-commit fa4e12c621040ba8660f58850588550ce237b0ff
+commit 2e913f3bd0ddcdacc6d5913e12210807001d8d67
+Merge: a43118f 096b75d
 Author: Ali Abdallah <ali@xfce.org>
-Date:   Wed Jun 7 10:32:44 2017 +0200
+Date:   Mon Jul 17 15:25:28 2017 +0200
+
+    Merge branch 'master' of ssh://git.xfce.org/xfce/tumbler
+
+commit a43118f57d86c1f8fc7d16c9e70e9bf392ea1a9c
+Author: Ali Abdallah <ali@xfce.org>
+Date:   Mon Jul 17 10:50:04 2017 +0200
+
+    Fix wrong variant signature in g_variant_get.
+
+commit bbe28a49c78156fe18676f04521aebe97b7f6ece
+Author: Ali Abdallah <ali@xfce.org>
+Date:   Mon Jul 17 10:48:06 2017 +0200
+
+    Don't ref the variant before sending a signal and let it
+    be consumed by the gdbus signal emission.
+
+commit 096b75d17dadbc2942ceca89fe3f041f6e758ed1
+Author: Pjotr <pjotrvertaalt@gmail.com>
+Date:   Tue Jul 4 12:33:45 2017 +0200
+
+    I18n: Update translation nl (100%).
+    
+    39 translated messages.
+    
+    Transifex (https://www.transifex.com/xfce/public/).
+
+commit 7f8256264ff98580160af10b8bc7f7e78e32d72e
+Author: Davidmp <medipas@gmail.com>
+Date:   Tue Jul 4 12:33:45 2017 +0200
+
+    I18n: Update translation ca (100%).
+    
+    39 translated messages.
+    
+    Transifex (https://www.transifex.com/xfce/public/).
+
+commit 2e0e873b1a899b301cd60760bd38fce4dc2a1eb2
+Author: Nobuhiro Iwamatsu <iwamatsu@nigauri.org>
+Date:   Mon Jul 3 12:30:35 2017 +0200
+
+    I18n: Update translation ja (100%).
+    
+    39 translated messages.
+    
+    Transifex (https://www.transifex.com/xfce/public/).
+
+commit efab05835d148b7494f22f72ea8e030180136e48
+Author: Anonymous <noreply@xfce.org>
+Date:   Mon Jun 26 12:30:36 2017 +0200
+
+    I18n: Update translation pl (100%).
+    
+    39 translated messages.
+    
+    Transifex (https://www.transifex.com/projects/p/xfce/).
+
+commit 5de4813a2744f31b57864a7ccd86de5274dfa116
+Author: Anonymous <noreply@xfce.org>
+Date:   Wed Jun 21 06:30:52 2017 +0200
+
+    I18n: Update translation lt (100%).
+    
+    39 translated messages.
+    
+    Transifex (https://www.transifex.com/projects/p/xfce/).
+
+commit 94d4546d04645d8e2b7895ec95c8fc6ab6f57bb6
+Author: Påvel Nicklasson <pavel2@frimix.se>
+Date:   Sun Jun 18 18:30:37 2017 +0200
+
+    I18n: Update translation sv (100%).
+    
+    39 translated messages.
+    
+    Transifex (https://www.transifex.com/projects/p/xfce/).
+
+commit 0dd5c04ac6204c1194dad78bb9de5e42fd8b313a
+Author: Baurzhan Muftakhidinov <baurthefirst@gmail.com>
+Date:   Fri Jun 16 18:30:42 2017 +0200
+
+    I18n: Update translation kk (100%).
+    
+    39 translated messages.
+    
+    Transifex (https://www.transifex.com/projects/p/xfce/).
+
+commit 03268fe78cd0fbb3ad4947b2e6f5b1dcc8fe8408
+Author: Pjotr <pjotrvertaalt@gmail.com>
+Date:   Sat Jun 10 15:03:22 2017 +0200
+
+    I18n: Update translation nl (100%).
+    
+    39 translated messages.
+    
+    Transifex (https://www.transifex.com/projects/p/xfce/).
+
+commit 5d7820785f3dd76f1dd10eb03d869c4f4cd1d37e
+Author: Pjotr <pjotrvertaalt@gmail.com>
+Date:   Sat Jun 10 12:30:43 2017 +0200
+
+    I18n: Update translation nl (100%).
+    
+    39 translated messages.
+    
+    Transifex (https://www.transifex.com/projects/p/xfce/).
+
+commit 550c35d2b443c2b295321b300ceac37e91211eed
+Author: Mingcong Bai <jeffbai@aosc.xyz>
+Date:   Fri Jun 9 18:30:32 2017 +0200
+
+    I18n: Update translation zh_CN (100%).
+    
+    39 translated messages.
+    
+    Transifex (https://www.transifex.com/projects/p/xfce/).
+
+commit 4e4e9bd1add69515d81e69aa54b0291f2749b7e5
+Author: Anonymous <noreply@xfce.org>
+Date:   Thu Jun 8 00:30:31 2017 +0200
+
+    I18n: Update translation lt (100%).
+    
+    39 translated messages.
+    
+    Transifex (https://www.transifex.com/projects/p/xfce/).
+
+commit a99347e03be2b075fceab33a068640e7f68767c0
+Author: Ali Abdallah <ali@xfce.org>
+Date:   Wed Jun 7 11:33:54 2017 +0200
+
+    Avoid loading desktop thumbnailers twice when XDG_DATA_DIRS
+    has path duplications.
+
+commit 4aaa786f057d06bd7e84d746e4bd20cb7386ca21
+Author: Ali Abdallah <ali@xfce.org>
+Date:   Wed Jun 7 10:10:40 2017 +0200
 
     On some systems $XDG_DATA_HOME can have duplicated path
     (ex. '/usr/share' twice). This causes tumbler to load a
@@ -10,15 +147,57 @@ Date:   Wed Jun 7 10:32:44 2017 +0200
     Use GHashTable to record already loaded path to avoid
     the issue, fix #13618.
 
-commit 01ed220403e0445c7c7bad3660199aedf7b8ffc7
-Author: Unit 193 <unit193@ubuntu.com>
-Date:   Tue May 16 03:44:10 2017 -0400
+commit 984e67ce5247a2543f0fd547b42201043c69e9b2
+Author: Ali Abdallah <ali@xfce.org>
+Date:   Wed Jun 7 09:51:34 2017 +0200
 
-    Fix typo in tumbler.rc
+    According to the API doc of GdkPixbuf, gdk_pixbuf_loader_write
+    will close the pixbuf loader on error.
     
-    Signed-off-by: Ali Abdallah <aliovx@gmail.com>
+    This commit adds a check for error so that we don't re-close the
+    pixbuf loader (which causes sigabrt). Fix #13360
 
-commit f6c2e7df53ee0290cc7804b153477334ac0dc5fe
+commit e650eda2282b870580d00408bc2a96337e8de544
+Author: Theppitak Karoonboonyanan <theppitak@gmail.com>
+Date:   Sun Jun 4 12:30:32 2017 +0200
+
+    I18n: Update translation th (100%).
+    
+    39 translated messages.
+    
+    Transifex (https://www.transifex.com/projects/p/xfce/).
+
+commit 972f2fb6a894d7334b44638cf7ecde79172fa5fc
+Author: André Miranda <andre42m@gmail.com>
+Date:   Sun Jun 4 06:30:53 2017 +0200
+
+    I18n: Update translation pt_BR (100%).
+    
+    39 translated messages.
+    
+    Transifex (https://www.transifex.com/projects/p/xfce/).
+
+commit 2dc070a830674142ff225ffff5273ec46779b215
+Author: Anonymous <noreply@xfce.org>
+Date:   Thu Jun 1 18:30:33 2017 +0200
+
+    I18n: Update translation da (100%).
+    
+    39 translated messages.
+    
+    Transifex (https://www.transifex.com/projects/p/xfce/).
+
+commit 4357595913a7a559a421056cb4f5625c6d775cd8
+Author: Pablo Roberto “Jristz” Lezaeta Reyes <prflr88@gmail.com>
+Date:   Wed May 31 12:30:35 2017 +0200
+
+    I18n: Update translation es (100%).
+    
+    39 translated messages.
+    
+    Transifex (https://www.transifex.com/projects/p/xfce/).
+
+commit 7c78b8762a3254fe42daf8d8c164577f73e4dcff
 Author: Justin Gassner <justin.gassner@web.de>
 Date:   Sat Dec 17 19:57:03 2016 +0100
 
@@ -26,22 +205,607 @@ Date:   Sat Dec 17 19:57:03 2016 +0100
     
     Signed-off-by: Ali Abdallah <aliovx@gmail.com>
 
-commit b4888b571f4b7b877b79178a348cf46d150680f1
+commit e45b5da1c585ccaa90e3b2a56f1f551114470991
+Merge: 7e5ddd5 9671cd6
+Author: Ali Abdallah <aliovx@gmail.com>
+Date:   Mon May 29 19:58:31 2017 +0200
+
+    Merge branch 'master' of ssh://git.xfce.org/xfce/tumbler
+
+commit 7e5ddd570294bef4578831e20db8a85d225065b5
 Author: Michał Górny <mgorny@gentoo.org>
 Date:   Sun Feb 19 10:17:40 2017 +0100
 
     Fix finding libopenraw-0.1.0 due to changed pkg-config name
     
     Bug: https://bugzilla.xfce.org/show_bug.cgi?id=13201
-
-commit 72bd7cba0920d239f2212194e42a2efd9dbbbf00
-Author: Ali Abdallah <ali@xfce.org>
-Date:   Wed Jun 7 09:51:34 2017 +0200
-
-    According to the API doc of GdkPixbuf, gdk_pixbuf_loader_write will close the pixbuf loader on error.
     
-    This commit adds a check for error so that we don't re-close the
-    pixbuf loader (which causes sigabrt). Fix #13360
+    Signed-off-by: Ali Abdallah <aliovx@gmail.com>
+
+commit 9671cd6bdb5c5a524c44ebb9a01d5d811d29fd7a
+Author: Igor <f2404@yandex.ru>
+Date:   Mon May 29 18:30:33 2017 +0200
+
+    I18n: Update translation ru (100%).
+    
+    39 translated messages.
+    
+    Transifex (https://www.transifex.com/projects/p/xfce/).
+
+commit 1dbab5c87fc68c3c46feb0b1b663e3a183503f8e
+Author: Pjotr <pjotrvertaalt@gmail.com>
+Date:   Mon May 29 12:30:32 2017 +0200
+
+    I18n: Update translation nl (100%).
+    
+    39 translated messages.
+    
+    Transifex (https://www.transifex.com/projects/p/xfce/).
+
+commit 9aae763140842f906a8984c9559e881a589965fd
+Author: Kukuh Syafaat <syafaatkukuh@gmail.com>
+Date:   Mon May 29 12:30:32 2017 +0200
+
+    I18n: Update translation id (100%).
+    
+    39 translated messages.
+    
+    Transifex (https://www.transifex.com/projects/p/xfce/).
+
+commit 11fd3305f319449db8228fbe516503b3839cfae8
+Author: Yannick Le Guen <leguen.yannick@gmail.com>
+Date:   Mon May 29 00:30:32 2017 +0200
+
+    I18n: Update translation fr (100%).
+    
+    39 translated messages.
+    
+    Transifex (https://www.transifex.com/projects/p/xfce/).
+
+commit a97936793379e224953f244e537f815af753b701
+Author: Ali Abdallah <aliovx@gmail.com>
+Date:   Sun May 28 12:20:35 2017 +0200
+
+    Missing entry in tumbler.rc for the new desktop thumbnailers plugin.
+
+commit ec9cd77251b0fe7dd2903cd06de9b9cd0b14322f
+Author: Ali Abdallah <aliovx@gmail.com>
+Date:   Sun May 28 10:45:38 2017 +0200
+
+    Use a better description in configure.ac and acinclude.m4 for the new plugin.
+    
+    Update version information and copyrights.
+
+commit ac8f0e2c50a44f83a258a41a8d66694d6822d42b
+Author: Ali Abdallah <aliovx@gmail.com>
+Date:   Sun May 28 10:44:47 2017 +0200
+
+    Added the files of the new desktop plugin to POTFILES.in
+
+commit 36b93acd4abe8f26d5e685e6c4cf290ad4c9798c
+Author: Ali Abdallah <aliovx@gmail.com>
+Date:   Sat May 27 21:22:32 2017 +0200
+
+    Remove a couple of ridiculous debug prints.
+
+commit 3c15ad93aa7c88b6bdebd78973e1c8f1d0ecbfcb
+Author: Ali Abdallah <aliovx@gmail.com>
+Date:   Sun May 28 10:41:27 2017 +0200
+
+    Don't ref the pixbuf as the desktop plugin returns it as it is.
+    Fix a small identation problem.
+
+commit b390c588b30ef388601640fc3853bce0eb3d8a05
+Author: Ali Abdallah <aliovx@gmail.com>
+Date:   Sat May 27 20:26:56 2017 +0200
+
+    Load and register in tumbler a list of thumbnailers read from XDG_DATA_DIRS/thumbnailers. These "desktop" thumbnailers should have *.thumbnailer as a desktop file name and [Thumbnailer Entry] for MimeType and Exec.
+
+commit 95311dbb45d07d8029e27bb374aeefa60e17b339
+Author: Ali Abdallah <aliovx@gmail.com>
+Date:   Tue May 23 09:10:16 2017 +0200
+
+    Added skeleton files for the desktop thumbnailer plugin.
+    
+    This plugin will add desktop thumbnailer support for tumbler see:
+    https://bugzilla.xfce.org/show_bug.cgi?id=7475
+
+commit 59ba8680de8831ee95dc5fe77b1376dc1fd7771b
+Author: jc1 <jc1.quebecos@gmail.com>
+Date:   Sat May 27 18:30:35 2017 +0200
+
+    I18n: Update translation fr (100%).
+    
+    38 translated messages.
+    
+    Transifex (https://www.transifex.com/projects/p/xfce/).
+
+commit b39fde548f9078994542c0c2f2981521b610da66
+Author: Elishai Eliyahu <e1907@mm.st>
+Date:   Fri May 26 00:30:34 2017 +0200
+
+    I18n: Update translation he (100%).
+    
+    38 translated messages.
+    
+    Transifex (https://www.transifex.com/projects/p/xfce/).
+
+commit 43850d2bee7b188b8d9461c9667ba2c2b86abc0a
+Author: Theppitak Karoonboonyanan <theppitak@gmail.com>
+Date:   Wed May 24 18:30:31 2017 +0200
+
+    I18n: Update translation th (100%).
+    
+    38 translated messages.
+    
+    Transifex (https://www.transifex.com/projects/p/xfce/).
+
+commit 3a918c1addd7b22becb6edc4fcdb8231687af002
+Author: José Vieira <jvieira33@sapo.pt>
+Date:   Tue May 23 18:30:31 2017 +0200
+
+    I18n: Update translation pt (100%).
+    
+    38 translated messages.
+    
+    Transifex (https://www.transifex.com/projects/p/xfce/).
+
+commit 0c0edfa7c32f79b369f284f3710162d93e328963
+Author: Anonymous <noreply@xfce.org>
+Date:   Mon May 22 00:30:38 2017 +0200
+
+    I18n: Update translation lt (100%).
+    
+    38 translated messages.
+    
+    Transifex (https://www.transifex.com/projects/p/xfce/).
+
+commit 7cb32585b6847d2e5f5e7731b43affefa29b19ce
+Author: abuyop <abuyop@gmail.com>
+Date:   Sun May 21 18:30:55 2017 +0200
+
+    I18n: Update translation ms (100%).
+    
+    38 translated messages.
+    
+    Transifex (https://www.transifex.com/projects/p/xfce/).
+
+commit 8f6d908093525f902797d284706908043091d8eb
+Author: Dušan Kazik <prescott66@gmail.com>
+Date:   Sun May 21 12:30:55 2017 +0200
+
+    I18n: Update translation sk (100%).
+    
+    38 translated messages.
+    
+    Transifex (https://www.transifex.com/projects/p/xfce/).
+
+commit 2770c64b2c1fcb01a14dc4649825d0ca38ee23bc
+Author: m4sk1n <m4sk1n@vivaldi.net>
+Date:   Wed May 17 18:30:52 2017 +0200
+
+    I18n: Update translation pl (100%).
+    
+    38 translated messages.
+    
+    Transifex (https://www.transifex.com/projects/p/xfce/).
+
+commit 4e1c8a1ba697f4381e7347dca76a467530a64758
+Author: Michal Várady <miko.vaji@gmail.com>
+Date:   Wed May 17 00:30:32 2017 +0200
+
+    I18n: Update translation cs (100%).
+    
+    38 translated messages.
+    
+    Transifex (https://www.transifex.com/projects/p/xfce/).
+
+commit 333d87ea94665084909d8eacc782270c7da30a86
+Author: Anonymous <noreply@xfce.org>
+Date:   Tue May 16 18:30:38 2017 +0200
+
+    I18n: Update translation da (100%).
+    
+    38 translated messages.
+    
+    Transifex (https://www.transifex.com/projects/p/xfce/).
+
+commit 5e2514bf3578702af0e76d8c174e5bfb02042ca5
+Author: Yarema aka Knedlyk <yupadmin@gmail.com>
+Date:   Tue May 16 12:30:32 2017 +0200
+
+    I18n: Update translation uk (100%).
+    
+    38 translated messages.
+    
+    Transifex (https://www.transifex.com/projects/p/xfce/).
+
+commit 2f11b05aa1fbd3374b9dd1c2e60b41fd5f7db482
+Author: Robert Antoni Buj Gelonch <rbuj@fedoraproject.org>
+Date:   Tue May 16 12:30:32 2017 +0200
+
+    I18n: Update translation ca (100%).
+    
+    38 translated messages.
+    
+    Transifex (https://www.transifex.com/projects/p/xfce/).
+
+commit 504a5eaeb5b61fcb585c787a6d0c88bc5b4c4da5
+Author: Kiril Kirilov <cybercop_montana@abv.bg>
+Date:   Tue May 16 12:30:32 2017 +0200
+
+    I18n: Update translation bg (100%).
+    
+    38 translated messages.
+    
+    Transifex (https://www.transifex.com/projects/p/xfce/).
+
+commit ee55bf769e8672851de231a00760a8c62283755b
+Author: Unit 193 <unit193@ubuntu.com>
+Date:   Tue May 16 03:44:10 2017 -0400
+
+    Fix typo in tumbler.rc
+    
+    Signed-off-by: Ali Abdallah <aliovx@gmail.com>
+
+commit a2267019008479a29316a4757f9d1189c6a90d16
+Author: Igor <f2404@yandex.ru>
+Date:   Tue May 16 06:30:33 2017 +0200
+
+    I18n: Update translation ru (100%).
+    
+    38 translated messages.
+    
+    Transifex (https://www.transifex.com/projects/p/xfce/).
+
+commit dae3919c3503ccb84781c4c00dfbbe054f2e7207
+Author: 박정규(Jung-Kyu Park) <bagjunggyu@gmail.com>
+Date:   Tue May 16 06:30:32 2017 +0200
+
+    I18n: Update translation ko (100%).
+    
+    38 translated messages.
+    
+    Transifex (https://www.transifex.com/projects/p/xfce/).
+
+commit cb1a6cba91857a3b07cd8297079b65a3afef7ac7
+Author: Kukuh Syafaat <syafaatkukuh@gmail.com>
+Date:   Tue May 16 06:30:32 2017 +0200
+
+    I18n: Update translation id (100%).
+    
+    38 translated messages.
+    
+    Transifex (https://www.transifex.com/projects/p/xfce/).
+
+commit 4749a0d48a216bdea3c9bd4bdbde35120e726c31
+Author: Pablo Roberto “Jristz” Lezaeta Reyes <prflr88@gmail.com>
+Date:   Tue May 16 06:30:32 2017 +0200
+
+    I18n: Update translation es (100%).
+    
+    38 translated messages.
+    
+    Transifex (https://www.transifex.com/projects/p/xfce/).
+
+commit d02adb17983155bfbe278228be3685d7f62ba1d0
+Merge: 87b985e 87ec630
+Author: Ali Abdallah <aliovx@gmail.com>
+Date:   Thu May 11 11:06:12 2017 +0200
+
+    Merge branch 'gdbus-port'
+
+commit 87ec6303a672bc66c538ff9df51f596fd9106d3e
+Author: Ali Abdallah <aliovx@gmail.com>
+Date:   Thu May 11 09:38:17 2017 +0200
+
+    Fix a couple of compile warnings caused by return void
+    with g_return_if_fail in functions returing boolean.
+
+commit 87b985eb6ac8960173e25a82adb626584d70bae4
+Author: Xosé <xosecalvo@gmail.com>
+Date:   Tue Mar 21 00:30:56 2017 +0100
+
+    I18n: Update translation gl (100%).
+    
+    44 translated messages.
+    
+    Transifex (https://www.transifex.com/projects/p/xfce/).
+
+commit b9cb0cee1e40a9a5a073c08a8b9d638e786ca390
+Author: Apóstolos Papaðimitríu <apostolos.papadimitriu@gmail.com>
+Date:   Sat Mar 4 00:30:42 2017 +0100
+
+    I18n: Update translation el (100%).
+    
+    44 translated messages.
+    
+    Transifex (https://www.transifex.com/projects/p/xfce/).
+
+commit 1badaeed4e268c247f6bb4972fb4a60585dcc9a0
+Author: Ivica  Kolić <ikoli@yahoo.com>
+Date:   Sun Feb 26 00:30:53 2017 +0100
+
+    I18n: Update translation hr (100%).
+    
+    44 translated messages.
+    
+    Transifex (https://www.transifex.com/projects/p/xfce/).
+
+commit 318fbf73d377dc5240eec8700633c59b528c5ade
+Author: Ivica  Kolić <ikoli@yahoo.com>
+Date:   Fri Feb 3 06:30:37 2017 +0100
+
+    I18n: Update translation hr (100%).
+    
+    44 translated messages.
+    
+    Transifex (https://www.transifex.com/projects/p/xfce/).
+
+commit 3d5903326852db3eb2414e62cf2e6a3101f22568
+Author: Anonymous <noreply@xfce.org>
+Date:   Thu Jan 19 12:30:53 2017 +0100
+
+    I18n: Update translation da (100%).
+    
+    44 translated messages.
+    
+    Transifex (https://www.transifex.com/projects/p/xfce/).
+
+commit 2b7a84a376ee9fb98b1f383450365e70d6240557
+Author: Anonymous <noreply@xfce.org>
+Date:   Sat Jan 14 12:31:09 2017 +0100
+
+    I18n: Update translation da (100%).
+    
+    44 translated messages.
+    
+    Transifex (https://www.transifex.com/projects/p/xfce/).
+
+commit 4290e0b232b05cbba01c935a0e94c771a3515802
+Author: Robert Antoni Buj i Gelonch <rbuj@fedoraproject.org>
+Date:   Sat Apr 30 00:31:10 2016 +0200
+
+    I18n: Update translation ca (100%).
+    
+    44 translated messages.
+    
+    Transifex (https://www.transifex.com/projects/p/xfce/).
+
+commit 782782bfae35eff6228562aea010d1b95b37819f
+Author: Påvel Nicklasson <pavelnicklasson@bahnhof.se>
+Date:   Mon Apr 25 00:30:25 2016 +0200
+
+    I18n: Update translation sv (100%).
+    
+    44 translated messages.
+    
+    Transifex (https://www.transifex.com/projects/p/xfce/).
+
+commit e7b570ebdff72fe44c667a4e5e1fe0b20ae0454d
+Author: Anonymous <noreply@xfce.org>
+Date:   Fri Mar 18 00:30:57 2016 +0100
+
+    I18n: Update translation lt (100%).
+    
+    44 translated messages.
+    
+    Transifex (https://www.transifex.com/projects/p/xfce/).
+
+commit d3764923ce2a63369945ad05413443fc5207b54e
+Author: Elishai Eliyahu <e1907@mm.st>
+Date:   Tue Mar 8 00:30:25 2016 +0100
+
+    I18n: Update translation he (100%).
+    
+    44 translated messages.
+    
+    Transifex (https://www.transifex.com/projects/p/xfce/).
+
+commit 1fb6b0f583eaffd1adbae8ced5f58c1c8f63479b
+Author: Apostolos Papadimitriu <apostolos.papadimitriu@gmail.com>
+Date:   Tue Feb 9 00:30:38 2016 +0100
+
+    I18n: Update translation el (97%).
+    
+    43 translated messages, 1 untranslated message.
+    
+    Transifex (https://www.transifex.com/projects/p/xfce/).
+
+commit 059d9cd6a6b0ec9c400ac82f75cd17aeaee27ea1
+Author: Piarres Beobide <pi@beobide.net>
+Date:   Mon Feb 8 18:30:34 2016 +0100
+
+    I18n: Update translation eu (100%).
+    
+    44 translated messages.
+    
+    Transifex (https://www.transifex.com/projects/p/xfce/).
+
+commit 22acd8bd89a16bc3bd8fdf21520d0516e931961c
+Author: Apostolos Papadimitriu <apostolos.papadimitriu@gmail.com>
+Date:   Fri Feb 5 18:30:30 2016 +0100
+
+    I18n: Update translation el (95%).
+    
+    42 translated messages, 2 untranslated messages.
+    
+    Transifex (https://www.transifex.com/projects/p/xfce/).
+
+commit 13aac61d20927ef8ccd0de5023b1ca38a5a49641
+Author: Ivica  Kolić <ikoli@yahoo.com>
+Date:   Fri Dec 18 18:30:36 2015 +0100
+
+    I18n: Update translation hr (100%).
+    
+    44 translated messages.
+    
+    Transifex (https://www.transifex.com/projects/p/xfce/).
+
+commit 96cd084411fd8b5fcfd98fb386ca4012e1a96cef
+Author: Davidmp <medipas@gmail.com>
+Date:   Tue Dec 15 18:30:23 2015 +0100
+
+    I18n: Update translation ca (100%).
+    
+    44 translated messages.
+    
+    Transifex (https://www.transifex.com/projects/p/xfce/).
+
+commit 8dacf47153bdafc82fc48fdecc079514a6ecab39
+Author: Sveinn í Felli <sv1@fellsnet.is>
+Date:   Sun Dec 13 18:30:24 2015 +0100
+
+    I18n: Update translation is (100%).
+    
+    44 translated messages.
+    
+    Transifex (https://www.transifex.com/projects/p/xfce/).
+
+commit 8b048c5d48673b51860a546608e3b4c6a5dae23c
+Author: Ali Abdallah <aliovx@gmail.com>
+Date:   Sun Nov 1 21:40:18 2015 +0100
+
+    Pass &s to g_variant_get to get only a pointer to the serialised
+    data.
+
+commit a52fce150b161149886f417b80b78bcfe977accf
+Author: Ali Abdallah <aliovx@gmail.com>
+Date:   Wed Oct 14 13:47:25 2015 +0200
+
+    Fixed a typo in g_variant_is_of_type.
+    
+    Indentation prob also is fixed.
+
+commit 2eef7d1e9e637b2e47fd5c5115b7a58dbaaa12cd
+Author: Ali Abdallah <aliovx@gmail.com>
+Date:   Tue Oct 13 14:59:14 2015 +0200
+
+    Update news and version information
+
+commit d39fd0cf6f523796452938458ee7cdfde73a1683
+Author: Ali Abdallah <aliovx@gmail.com>
+Date:   Sun Oct 11 09:20:51 2015 +0200
+
+    Dummy commit to create user repo
+
+commit e6ca1b0a68b56094fc5576b6bf3915b26a721bb6
+Author: Ali Abdallah <aliovx@gmail.com>
+Date:   Sat Oct 10 18:50:42 2015 +0200
+
+    Replace the deprecated function 'gsf_msole_metadata_read'
+    with 'gsf_doc_meta_data_read_from_msole.'
+
+commit acc901b4c430bbde7d0e08c5c4df116182af2e64
+Author: Ali Abdallah <aliovx@gmail.com>
+Date:   Sat Oct 10 18:50:17 2015 +0200
+
+    Porting the specialized thumbnailer to gdbus
+    Getting rid of all dbus-glib api
+    
+    Tumbler is now dbus-glib free!
+
+commit 59984d6e3b6ac3f8108a660afb56c38b060cabbc
+Author: Ali Abdallah <aliovx@gmail.com>
+Date:   Sat Oct 10 16:41:43 2015 +0200
+
+    Port the caching service to gbus.
+
+commit 91111b97d8b43a216c8c37ea734b789f79e48421
+Author: Ali Abdallah <aliovx@gmail.com>
+Date:   Sat Oct 10 13:07:56 2015 +0200
+
+    Port tumbler-service to gdbus.
+    Also get rid of some dbus low level code
+    in favor of their gdbus equivalents.
+
+commit 1f9899cad6ba2f6bae6722db605de41ba474f1b9
+Author: Ali Abdallah <aliovx@gmail.com>
+Date:   Thu Oct 8 20:10:32 2015 +0200
+
+    Start porting some code from dbus-glib.
+    
+    TumblerManager object which exports the interface
+    'org.freedesktop.thumbnails.Manager1' is almost dbus-glib free now.
+    There is still only a dbus-glib legacy_connection used for
+    the TumblerSpecializedThumbnailer, which will go away one that object
+    is ported.
+
+commit 6b0983ef1bf390c33e919e2086e9be50b4ff8752
+Author: Xosé <xosecalvo@gmail.com>
+Date:   Sat Sep 19 00:31:09 2015 +0200
+
+    I18n: Update translation gl (100%).
+    
+    44 translated messages.
+    
+    Transifex (https://www.transifex.com/projects/p/xfce/).
+
+commit 418677862abee549a62e0bf8b4d92a2ebffb3ba4
+Author: Påvel Nicklasson <pavelnicklasson@bahnhof.se>
+Date:   Mon Jul 20 00:31:26 2015 +0200
+
+    I18n: Update translation sv (100%).
+    
+    44 translated messages.
+    
+    Transifex (https://www.transifex.com/projects/p/xfce/).
+
+commit 4f8f81e4bf32165139e76ede3a995354e1e57bee
+Author: Påvel Nicklasson <pavelnicklasson@bahnhof.se>
+Date:   Wed Jun 3 18:31:21 2015 +0200
+
+    I18n: Update translation sv (100%).
+    
+    44 translated messages.
+    
+    Transifex (https://www.transifex.com/projects/p/xfce/).
+
+commit e086e3c50ccd1aca526a73bd4c14850b5c2eb2ba
+Author: Anonymous <noreply@xfce.org>
+Date:   Thu Apr 9 00:30:57 2015 +0200
+
+    I18n: Update translation lt (100%).
+    
+    44 translated messages.
+    
+    Transifex (https://www.transifex.com/projects/p/xfce/).
+
+commit 0d4e8305b21174a536a77c60ea5fd8f26f76295d
+Author: Anonymous <noreply@xfce.org>
+Date:   Wed Apr 1 18:30:29 2015 +0200
+
+    I18n: Update translation lt (100%).
+    
+    44 translated messages.
+    
+    Transifex (https://www.transifex.com/projects/p/xfce/).
+
+commit 717b0c50b9069e6264a55b11f95f485a7814bddc
+Author: Anonymous <noreply@xfce.org>
+Date:   Fri Mar 27 18:30:29 2015 +0100
+
+    I18n: Update translation lt (97%).
+    
+    43 translated messages, 1 untranslated message.
+    
+    Transifex (https://www.transifex.com/projects/p/xfce/).
+
+commit 4ffe34807248e6c324a7bda95696e73dc3b0dac7
+Author: Anonymous <noreply@xfce.org>
+Date:   Mon Mar 16 18:30:33 2015 +0100
+
+    I18n: Update translation lt (88%).
+    
+    39 translated messages, 5 untranslated messages.
+    
+    Transifex (https://www.transifex.com/projects/p/xfce/).
+
+commit 81edf4346bdae6abd680c6e1518693a88861403e
+Author: Matt Thirtytwo <matt.59491@gmail.com>
+Date:   Thu Mar 5 20:33:08 2015 +0100
+
+    Removed unused static function xdg_cache_cache_get_home() (bug #11648)
 
 commit 5ef58d3821f766cb8f77b1feb6ad29b0d44eb41a
 Author: Harald Judt <h.judt@gmx.at>

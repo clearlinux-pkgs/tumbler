@@ -1,0 +1,11 @@
+Configure miss: FFMPEGTHUMBNAILER
+Configure miss: whether to build the ffmpeg video thumbnailer plugin
+Configure miss: GSTREAMER_TAG
+Configure miss: whether to build the gstreamer video thumbnailer plugin
+Configure miss: GSF
+Configure miss: whether to build the office thumbnailer plugin
+Configure miss: POPPLER_GLIB
+Configure miss: whether to build the poppler PDF/PS thumbnailer plugin
+Configure miss: LIBOPENRAW_GNOME
+Configure miss: LIBOPENRAW_GNOME
+Configure miss: whether to build the RAW image thumbnailer plugin
